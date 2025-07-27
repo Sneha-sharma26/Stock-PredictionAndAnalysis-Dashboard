@@ -43,50 +43,107 @@ An interactive, ML-powered dashboard built with **Streamlit** for analyzing stoc
 ```bash
 git clone https://github.com/Sneha-sharma26/Stock-PredictionAndAnalysis-Dashboard.git
 
----
-
-### 2. Install Dependencies
-```bash
+2. Install Dependencies
+bash
 pip install -r requirements.txt
 
----
-
-### 3. Add Your NewsAPI Key
+3. Add Your NewsAPI Key
 Create a .streamlit/secrets.toml file:
 
-```toml
+toml
 NEWS_API_KEY = "your_news_api_key"
 
 You can get your API key from: https://newsapi.org
 
-### 4. Run the App
-```bash
-streamlit run src/app.py
+4. Run the App
+bash
+
+streamlit run app.py
 
 ---
 
 
-## 🧰 Tech Stack
+🧰 Tech Stack
 
-| Layer         | Tool / Library          |
-| ------------- | ----------------------- |
-| UI & Layout   | Streamlit               |
-| Data Fetching | yfinance (Yahoo API)    |
-| Plotting      | Plotly                  |
-| ML Model      | LSTM (TensorFlow/Keras) |
-| Sentiment     | NewsAPI + TextBlob      |
-| ML Utils      | scikit-learn            |
+Layer	       Tool / Library
+UI & Layout	    Streamlit
+Data Fetching	yfinance (Yahoo API)
+Plotting	    Plotly
+ML Model	    LSTM (TensorFlow/Keras)
+Sentiment	    NewsAPI + TextBlob
+ML Utils	    scikit-learn
+
+---
+
+📁 Folder Structure
+.
+├── app.py
+├── data_fetcher.py
+├── lstm_model.py
+├── preprocess.py
+├── sentiment.py
+├── models.py
+├── requirements.txt
+├── README.md
+└── .streamlit/
+    └── secrets.toml  # Not pushed to GitHub (see .gitignore)
 
 ---
 
 🙋‍♀️ Author
 Sneha Sharma
+
 💻 GitHub: https://github.com/Sneha-sharma26
 🔗 LinkedIn: https://www.linkedin.com/in/sneha-sharma-5191092b8/
 
+📃 License
+This project is open-source under the MIT License.
+Feel free to use, share, or extend it!
+
 ---
 
-## 📃 License
+# ### 2. Install Dependencies
+# ```bash
+# pip install -r requirements.txt
 
-This project is open-source under the **MIT License**.  
-Feel free to use, share, or extend it!
+# ---
+
+# ### 3. Add Your NewsAPI Key
+# Create a .streamlit/secrets.toml file:
+
+# ```toml
+# NEWS_API_KEY = "your_news_api_key"
+
+# You can get your API key from: https://newsapi.org
+
+# ### 4. Run the App
+# ```bash
+# streamlit run src/app.py
+
+# ---
+
+
+# ## 🧰 Tech Stack
+
+# | Layer         | Tool / Library          |
+# | ------------- | ----------------------- |
+# | UI & Layout   | Streamlit               |
+# | Data Fetching | yfinance (Yahoo API)    |
+# | Plotting      | Plotly                  |
+# | ML Model      | LSTM (TensorFlow/Keras) |
+# | Sentiment     | NewsAPI + TextBlob      |
+# | ML Utils      | scikit-learn            |
+
+# ---
+
+# 🙋‍♀️ Author
+# Sneha Sharma
+# 💻 GitHub: https://github.com/Sneha-sharma26
+# 🔗 LinkedIn: https://www.linkedin.com/in/sneha-sharma-5191092b8/
+
+# ---
+
+# ## 📃 License
+
+# This project is open-source under the **MIT License**.  
+# Feel free to use, share, or extend it!
