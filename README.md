@@ -81,7 +81,9 @@ streamlit run src/app.py
 
 ## 🙋‍♀️ Author
 Sneha Sharma
+
 💻 GitHub: https://github.com/Sneha-sharma26
+
 🔗 LinkedIn: https://www.linkedin.com/in/sneha-sharma-5191092b8/
 
 ---
