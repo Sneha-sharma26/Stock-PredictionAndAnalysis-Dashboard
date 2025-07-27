@@ -42,6 +42,7 @@ An interactive, ML-powered dashboard built with **Streamlit** for analyzing stoc
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/Sneha-sharma26/Stock-PredictionAndAnalysis-Dashboard.git
+'''
 
 ### 2. Install Dependencies
 ```bash
