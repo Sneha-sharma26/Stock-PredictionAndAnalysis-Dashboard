@@ -13,8 +13,7 @@ def fetch_stock_data(tickers=["AAPL", "MSFT", "AMZN", "META", "JPM", "INFY"], st
     all_data = {}
     for ticker in tickers:
         try:
-            yf_ticker = yf.Ticker(ticker)
-            df = yf_ticker.history(start=start_date, end=end_date, auto_adjust=True)
+            df = yf.download(ticker, start=start_date, end=end_date, auto_adjust=True)
             if df.empty:
                 raise ValueError(f"No data found for ticker '{ticker}'. It may be delisted or invalid.")
             else:
