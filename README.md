@@ -34,24 +34,28 @@ An interactive, ML-powered dashboard built with **Streamlit** for analyzing stoc
 ## 📦 Installation
 
 ### 1. Clone the Repository
-```bash
+```
 git clone https://github.com/Sneha-sharma26/Stock-PredictionAndAnalysis-Dashboard.git
+```
 
 ### 2. Install Dependencies
-```bash
+```
 pip install -r requirements.txt
+```
 
 ### 3. Add Your NewsAPI Key
 Create a .streamlit/secrets.toml file:
 
 ```toml
 NEWS_API_KEY = "your_news_api_key"
+```
 
 You can get your API key from: https://newsapi.org
 
 ### 4. Run the App
-```bash
+```
 streamlit run src/app.py
+```
 
 ---
 
@@ -69,9 +73,11 @@ streamlit run src/app.py
 
 ---
 
-🙋‍♀️ Author
+## 🙋‍♀️ Author
 Sneha Sharma
+
 💻 GitHub: https://github.com/Sneha-sharma26
+
 🔗 LinkedIn: https://www.linkedin.com/in/sneha-sharma-5191092b8/
 
 ---
