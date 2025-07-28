@@ -4,12 +4,6 @@ An interactive, ML-powered dashboard built with **Streamlit** for analyzing stoc
 
 ---
 
-## 🚀 Live App
-
-[🔗 Click here to launch the app]()
-
----
-
 ## 🧠 Features
 
 ### ✅ Stock Price Analysis
