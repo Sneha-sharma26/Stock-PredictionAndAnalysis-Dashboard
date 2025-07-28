@@ -1,5 +1,7 @@
 # Use official lightweight Python image
-FROM python:3.10-slim
+FROM python:3.10-slim-bullseye
+# or even
+FROM python:3.10-bookworm
 
 # Set working directory
 WORKDIR /app
