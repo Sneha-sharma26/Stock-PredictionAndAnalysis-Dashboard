@@ -240,10 +240,16 @@ with tab5:
             with st.spinner(f"Training LSTM for {ticker}..."):
                 try:
                     df_for_pred = df.rename(columns={f"Close_{ticker}": "Close"})
+                    # predicted_prices,rmse, mae = predict_next_30_days(df_for_pred)
                     predicted_prices = predict_next_30_days(df_for_pred)
                 except Exception as e:
                     st.error(f"Error predicting for {ticker}: {str(e)}")
                     continue
+
+            # # prediction accuracy
+            # st.success(f"📊 Prediction Model Evaluation for {ticker}:")
+            # st.markdown(f"- **RMSE** (Root Mean Squared Error): `{rmse:.2f}`")
+            # st.markdown(f"- **MAE** (Mean Absolute Error): `{mae:.2f}`")
 
             future_dates = pd.date_range(df.index[-1] + pd.Timedelta(days=1), periods=30)
             fig = go.Figure()

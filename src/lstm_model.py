@@ -3,6 +3,7 @@ import pandas as pd
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Dropout
 from sklearn.preprocessing import MinMaxScaler
+# from sklearn.metrics import mean_squared_error, mean_absolute_error
 
 
 def predict_next_30_days(df):
@@ -33,6 +34,15 @@ def predict_next_30_days(df):
     model.compile(optimizer='adam', loss='mean_squared_error')
     model.fit(X, y, epochs=10, batch_size=32, verbose=0)
 
+    # # Accuracy Evaluation
+    # y_pred_scaled = model.predict(X, verbose=0)
+    # y_true = scaler.inverse_transform(y.reshape(-1, 1))
+    # y_pred = scaler.inverse_transform(y_pred_scaled)
+
+    # rmse = np.sqrt(mean_squared_error(y_true, y_pred))
+    # mae = mean_absolute_error(y_true, y_pred)
+
+    # predict next 30 days
     last_lookback = scaled_data[-look_back:]
     prediction_list = []
 
@@ -43,4 +53,6 @@ def predict_next_30_days(df):
         last_lookback = np.append(last_lookback, [[pred_price]], axis=0)
 
     predicted_prices = scaler.inverse_transform(np.array(prediction_list).reshape(-1, 1))
+    
+    # return predicted_prices.flatten(), rmse, mae
     return predicted_prices.flatten()
